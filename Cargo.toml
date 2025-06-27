@@ -1,0 +1,14 @@
+[workspace]
+resolver = "3"
+members = [ "sp1-program", "sp1-zkv-cli",  "sp1-zkv-verifier" ]
+
+[workspace.dependencies]
+# sp1
+sp1-build = { version = "5.0.5" }
+sp1-prover = { version = "5.0.5" }
+sp1-sdk = { version = "5.0.5" }
+sp1-stark = { version = "5.0.5" }
+sp1-zkvm = { version = "5.0.5" }
+
+bincode = { version = "2", default-features = false }
+hex = { version = "0.4.3" }

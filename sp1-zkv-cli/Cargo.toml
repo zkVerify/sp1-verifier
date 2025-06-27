@@ -1,0 +1,17 @@
+[package]
+name = "sp1-zkv-cli"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# sp1
+sp1-sdk = { workspace = true }
+sp1-stark = {workspace = true }
+p3-field = { version = "0.2.3-succinct" }
+
+bincode = { workspace = true, features = ["serde", "std"] }
+clap = { version = "4.5", features = ["derive"] }
+hex = { workspace = true }
+
+[build-dependencies]
+sp1-build = { workspace = true}
