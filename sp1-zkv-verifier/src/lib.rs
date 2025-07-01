@@ -185,12 +185,12 @@ mod tests {
 mod deserialization {
 
     use crate::SHRINK_VK_BYTES;
-    use sp1_sdk::{Prover, ProverClient, SP1Stdin, include_elf};
+    use sp1_sdk::{Prover, ProverClient, SP1Stdin};
     use sp1_stark::SP1ProverOpts;
 
     #[test]
     fn shrink_vk_is_correct() {
-        const SP1_ELF: &[u8] = include_elf!("sp1-program");
+        const SP1_ELF: &[u8] = include_bytes!("../resources/sp1-program");
         let mut stdin = SP1Stdin::new();
         stdin.write(&b"hello world".to_vec());
 

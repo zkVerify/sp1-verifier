@@ -22,5 +22,4 @@ sp1-stark = { workspace = true }
 hex = { workspace = true }
 
 [build-dependencies]
-sp1-build = { workspace = true }
 sp1-sdk = { workspace = true }
