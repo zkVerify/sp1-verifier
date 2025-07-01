@@ -56,15 +56,13 @@ pub fn verify(
     let shrink_machine = ShrinkAir::shrink_machine(InnerSC::compressed());
     let mut challenger = shrink_machine.config().challenger();
 
-    shrink_machine
-        .verify(
-            &shrink_vk(),
-            &MachineProof {
-                shard_proofs: vec![proof.clone()],
-            },
-            &mut challenger,
-        )
-        .unwrap();
+    shrink_machine.verify(
+        &shrink_vk(),
+        &MachineProof {
+            shard_proofs: vec![proof.clone()],
+        },
+        &mut challenger,
+    )?;
 
     // Validate public values
     let public_values: &RecursionPublicValues<_> = proof.public_values.as_slice().borrow();
