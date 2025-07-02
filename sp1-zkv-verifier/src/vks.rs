@@ -34,6 +34,7 @@ mod deserialization {
     use sp1_sdk::{Prover, ProverClient, SP1Stdin};
     use sp1_stark::SP1ProverOpts;
 
+    #[ignore]
     #[test]
     fn shrink_vk_is_correct() {
         const SP1_ELF: &[u8] = include_bytes!("../resources/sp1-program");

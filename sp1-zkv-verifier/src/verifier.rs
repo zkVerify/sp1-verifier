@@ -21,11 +21,6 @@ pub fn verify(vkey_digest: &[u8; 32], proof: &ShardProof, inputs: &[u8]) -> Resu
             "sp1 vk hash mismatch",
         ));
     }
-    if !is_recursion_public_values_valid(&InnerSC::default(), public_values) {
-        return Err(MachineVerificationError::InvalidPublicValues(
-            "recursion public values are invalid",
-        ));
-    }
     if public_values.vk_root != recursion_vk_root() {
         return Err(MachineVerificationError::InvalidPublicValues(
             "vk_root mismatch",
@@ -34,6 +29,11 @@ pub fn verify(vkey_digest: &[u8; 32], proof: &ShardProof, inputs: &[u8]) -> Resu
     if !public_values.is_complete.is_one() {
         return Err(MachineVerificationError::InvalidPublicValues(
             "is_complete is not 1",
+        ));
+    }
+    if !is_recursion_public_values_valid(&InnerSC::default(), public_values) {
+        return Err(MachineVerificationError::InvalidPublicValues(
+            "recursion public values are invalid",
         ));
     }
 
@@ -46,7 +46,5 @@ pub fn verify(vkey_digest: &[u8; 32], proof: &ShardProof, inputs: &[u8]) -> Resu
             shard_proofs: vec![proof.clone()],
         },
         &mut challenger,
-    )?;
-
-    Ok(())
+    )
 }

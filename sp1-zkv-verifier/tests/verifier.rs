@@ -1,4 +1,8 @@
+use core::borrow::Borrow;
+use p3_baby_bear::BabyBear;
+use p3_field::AbstractField;
 use rstest::{fixture, rstest};
+use sp1_recursion_core_no_std::air::RecursionPublicValues;
 use sp1_zkv_verifier::ShardProof;
 use std::fs::File;
 
@@ -37,9 +41,36 @@ fn invalid_inputs(mut valid_inputs: Vec<u8>) -> Vec<u8> {
 }
 
 #[fixture]
-fn invalid_proof(mut valid_proof: ShardProof) -> ShardProof {
+fn proof_with_invalid_fri_proof(mut valid_proof: ShardProof) -> ShardProof {
     valid_proof.opening_proof.fri_proof.query_proofs[0].commit_phase_openings[0].sibling_value =
         Default::default();
+    valid_proof
+}
+
+#[fixture]
+fn proof_with_invalid_recursion_vk_root(mut valid_proof: ShardProof) -> ShardProof {
+    let public_values: &RecursionPublicValues<_> = valid_proof.public_values.as_slice().borrow();
+    let mut public_values = public_values.clone();
+    public_values.vk_root = [Default::default(); 8];
+    valid_proof.public_values = public_values.as_array().into();
+    valid_proof
+}
+
+#[fixture]
+fn proof_incomplete(mut valid_proof: ShardProof) -> ShardProof {
+    let public_values: &RecursionPublicValues<_> = valid_proof.public_values.as_slice().borrow();
+    let mut public_values = public_values.clone();
+    public_values.is_complete = BabyBear::zero();
+    valid_proof.public_values = public_values.as_array().into();
+    valid_proof
+}
+
+#[fixture]
+fn proof_with_invalid_digest(mut valid_proof: ShardProof) -> ShardProof {
+    let public_values: &RecursionPublicValues<_> = valid_proof.public_values.as_slice().borrow();
+    let mut public_values = public_values.clone();
+    public_values.digest = [BabyBear::zero(); 8];
+    valid_proof.public_values = public_values.as_array().into();
     valid_proof
 }
 
@@ -69,8 +100,54 @@ mod verifier_should_reject_if {
     }
 
     #[rstest]
-    fn proof_is_invalid(invalid_proof: ShardProof, valid_vk_hash: [u8; 32], valid_inputs: Vec<u8>) {
-        assert!(sp1_zkv_verifier::verify(&valid_vk_hash, &invalid_proof, &valid_inputs).is_err());
+    fn proof_is_invalid(
+        proof_with_invalid_fri_proof: ShardProof,
+        valid_vk_hash: [u8; 32],
+        valid_inputs: Vec<u8>,
+    ) {
+        assert!(
+            sp1_zkv_verifier::verify(&valid_vk_hash, &proof_with_invalid_fri_proof, &valid_inputs)
+                .is_err()
+        );
+    }
+
+    #[rstest]
+    fn proof_has_invalid_recursion_vk_root(
+        proof_with_invalid_recursion_vk_root: ShardProof,
+        valid_vk_hash: [u8; 32],
+        valid_inputs: Vec<u8>,
+    ) {
+        assert!(
+            sp1_zkv_verifier::verify(
+                &valid_vk_hash,
+                &proof_with_invalid_recursion_vk_root,
+                &valid_inputs
+            )
+            .is_err()
+        );
+    }
+
+    #[rstest]
+    fn proof_is_incomplete(
+        proof_incomplete: ShardProof,
+        valid_vk_hash: [u8; 32],
+        valid_inputs: Vec<u8>,
+    ) {
+        assert!(
+            sp1_zkv_verifier::verify(&valid_vk_hash, &proof_incomplete, &valid_inputs).is_err()
+        );
+    }
+
+    #[rstest]
+    fn proof_has_invalid_public_value_digest(
+        proof_with_invalid_digest: ShardProof,
+        valid_vk_hash: [u8; 32],
+        valid_inputs: Vec<u8>,
+    ) {
+        assert!(
+            sp1_zkv_verifier::verify(&valid_vk_hash, &proof_with_invalid_digest, &valid_inputs)
+                .is_err()
+        );
     }
 
     #[rstest]
