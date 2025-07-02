@@ -24,7 +24,7 @@ pub fn recursion_vk_root() -> [BabyBear; DIGEST_SIZE] {
         650304731,
         1117171342,
     ]
-    .map(|n| BabyBear::from_canonical_u32(n))
+    .map(BabyBear::from_canonical_u32)
 }
 
 #[cfg(test)]

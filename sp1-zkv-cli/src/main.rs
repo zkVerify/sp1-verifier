@@ -1,9 +1,6 @@
 use clap::{Parser, Subcommand};
 use p3_field::PrimeField32;
-use sp1_sdk::{
-    HashableKey, Prover, ProverClient, SP1Proof, SP1ProofWithPublicValues, SP1Stdin,
-    SP1VerifyingKey, include_elf,
-};
+use sp1_sdk::{HashableKey, Prover, ProverClient, SP1Stdin, include_elf};
 use sp1_stark::SP1ProverOpts;
 use std::{
     fs::{self, File},
@@ -40,7 +37,7 @@ fn main() {
     match &cli.command {
         Commands::GenerateProof { proof, vk } => {
             if let Err(e) = generate_proof(proof, vk) {
-                eprintln!("Error generating proof: {}", e);
+                eprintln!("Error generating proof: {e}");
                 std::process::exit(1);
             }
         }
