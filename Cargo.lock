@@ -4055,6 +4055,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "sp1-elf"
+version = "0.1.0"
+dependencies = [
+ "sp1-build",
+ "sp1-sdk",
+]
+
+[[package]]
 name = "sp1-lib"
 version = "5.0.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4442,16 +4450,17 @@ dependencies = [
 ]
 
 [[package]]
-name = "sp1-zkv-cli"
+name = "sp1-zkv-sdk"
 version = "0.1.0"
 dependencies = [
- "bincode 2.0.1",
- "clap",
- "hex",
+ "anyhow",
  "p3-field 0.2.3-succinct (registry+https://github.com/rust-lang/crates.io-index)",
- "sp1-build",
+ "sp1-elf",
+ "sp1-prover",
  "sp1-sdk",
  "sp1-stark",
+ "sp1-zkv-verifier",
+ "thiserror 2.0.12",
 ]
 
 [[package]]

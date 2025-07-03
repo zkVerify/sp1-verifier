@@ -1,0 +1,10 @@
+[package]
+name = "sp1-elf"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+sp1-sdk = { workspace = true }
+
+[build-dependencies]
+sp1-build = { workspace = true}
