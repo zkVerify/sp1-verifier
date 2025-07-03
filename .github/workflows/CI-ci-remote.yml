@@ -39,3 +39,9 @@ jobs:
           curl -L https://sp1up.succinct.xyz | bash
           ~/.sp1/bin/sp1up 
           ~/.sp1/bin/cargo-prove prove --version
+      - name: Run CI full
+        uses: actions-rs/cargo@v1
+        with:
+          toolchain: stable
+          command: make
+          args: ci-remote
