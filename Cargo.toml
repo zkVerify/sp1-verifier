@@ -1,6 +1,6 @@
 [workspace]
 resolver = "3"
-members = [ "sp1-elf", "sp1-program", "sp1-zkv-sdk",  "sp1-zkv-verifier" ]
+members = [ "sp1-elf", "sp1-program", "sp1-zkv-sdk", "sp1-zkv-verifier" ]
 
 [workspace.dependencies]
 bincode = { version = "2", default-features = false }

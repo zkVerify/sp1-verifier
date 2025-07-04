@@ -2,7 +2,7 @@ use anyhow::Result;
 use p3_field::PrimeField32;
 use sp1_prover::components::SP1ProverComponents;
 use sp1_sdk::{HashableKey, Prover, SP1ProofWithPublicValues, SP1VerifyingKey};
-use sp1_stark::{SP1ProverOpts,baby_bear_poseidon2::BabyBearPoseidon2};
+use sp1_stark::{SP1ProverOpts, baby_bear_poseidon2::BabyBearPoseidon2};
 use thiserror::Error;
 
 type ShardProof = sp1_stark::ShardProof<BabyBearPoseidon2>;
