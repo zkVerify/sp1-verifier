@@ -2,6 +2,7 @@
 name = "sp1-program"
 version = "0.1.0"
 edition = "2024"
+license = "Apache-2.0"
 
 [dependencies]
 sp1-zkvm = {workspace = true}
