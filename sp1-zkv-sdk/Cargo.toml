@@ -1,0 +1,17 @@
+[package]
+name = "sp1-zkv-sdk"
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
+
+[dependencies]
+anyhow = { version = "1.0.98" }
+p3-field = { version = "0.2.3-succinct" }
+sp1-prover = { workspace = true }
+sp1-sdk = { workspace = true }
+sp1-stark = { workspace = true }
+thiserror = { version = "2" }
+sp1-zkv-verifier = { path = "../sp1-zkv-verifier" }
+
+[dev-dependencies]
+sp1-elf = { path = "../sp1-elf" }
