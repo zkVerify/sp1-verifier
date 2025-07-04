@@ -2347,10 +2347,10 @@ dependencies = [
 [[package]]
 name = "p3-air"
 version = "0.2.3-succinct"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
- "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-matrix 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-matrix 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
 ]
 
 [[package]]
@@ -2371,13 +2371,13 @@ dependencies = [
 [[package]]
 name = "p3-baby-bear"
 version = "0.2.3-succinct"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
  "num-bigint 0.4.6",
- "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-mds 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-poseidon2 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-symmetric 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-mds 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-poseidon2 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-symmetric 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "rand 0.8.5",
  "serde",
 ]
@@ -2414,12 +2414,12 @@ dependencies = [
 [[package]]
 name = "p3-challenger"
 version = "0.2.3-succinct"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
- "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-maybe-rayon 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-symmetric 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-maybe-rayon 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-symmetric 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "serde",
  "tracing",
 ]
@@ -2441,13 +2441,13 @@ dependencies = [
 [[package]]
 name = "p3-commit"
 version = "0.2.3-succinct"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
  "itertools 0.12.1",
- "p3-challenger 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-matrix 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-challenger 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-matrix 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "serde",
 ]
 
@@ -2467,12 +2467,12 @@ dependencies = [
 [[package]]
 name = "p3-dft"
 version = "0.2.3-succinct"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
- "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-matrix 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-maybe-rayon 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-matrix 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-maybe-rayon 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "tracing",
 ]
 
@@ -2493,12 +2493,12 @@ dependencies = [
 [[package]]
 name = "p3-field"
 version = "0.2.3-succinct"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
  "itertools 0.12.1",
  "num-bigint 0.4.6",
  "num-traits",
- "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "rand 0.8.5",
  "serde",
 ]
@@ -2525,17 +2525,17 @@ dependencies = [
 [[package]]
 name = "p3-fri"
 version = "0.2.3-succinct"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
  "itertools 0.12.1",
- "p3-challenger 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-commit 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-dft 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-interpolation 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-matrix 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-maybe-rayon 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-challenger 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-commit 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-dft 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-interpolation 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-matrix 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-maybe-rayon 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "serde",
  "tracing",
 ]
@@ -2554,19 +2554,19 @@ dependencies = [
 [[package]]
 name = "p3-interpolation"
 version = "0.2.3-succinct"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
- "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-matrix 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-matrix 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
 ]
 
 [[package]]
 name = "p3-keccak"
 version = "0.2.3-succinct"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
- "p3-symmetric 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-symmetric 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "tiny-keccak",
 ]
 
@@ -2602,12 +2602,12 @@ dependencies = [
 [[package]]
 name = "p3-matrix"
 version = "0.2.3-succinct"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
  "itertools 0.12.1",
- "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-maybe-rayon 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-maybe-rayon 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "rand 0.8.5",
  "serde",
  "tracing",
@@ -2625,7 +2625,7 @@ dependencies = [
 [[package]]
 name = "p3-maybe-rayon"
 version = "0.2.3-succinct"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 
 [[package]]
 name = "p3-mds"
@@ -2645,14 +2645,14 @@ dependencies = [
 [[package]]
 name = "p3-mds"
 version = "0.2.3-succinct"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
  "itertools 0.12.1",
- "p3-dft 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-matrix 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-symmetric 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-dft 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-matrix 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-symmetric 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "rand 0.8.5",
 ]
 
@@ -2676,15 +2676,15 @@ dependencies = [
 [[package]]
 name = "p3-merkle-tree"
 version = "0.2.3-succinct"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
  "itertools 0.12.1",
- "p3-commit 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-matrix 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-maybe-rayon 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-symmetric 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-commit 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-matrix 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-maybe-rayon 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-symmetric 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "serde",
  "tracing",
 ]
@@ -2706,12 +2706,12 @@ dependencies = [
 [[package]]
 name = "p3-poseidon2"
 version = "0.2.3-succinct"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
  "gcd",
- "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-mds 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-symmetric 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-mds 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-symmetric 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "rand 0.8.5",
  "serde",
 ]
@@ -2730,10 +2730,10 @@ dependencies = [
 [[package]]
 name = "p3-symmetric"
 version = "0.2.3-succinct"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
  "itertools 0.12.1",
- "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "serde",
 ]
 
@@ -2759,17 +2759,17 @@ dependencies = [
 [[package]]
 name = "p3-uni-stark"
 version = "0.2.3-succinct"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
  "itertools 0.12.1",
- "p3-air 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-challenger 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-commit 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-dft 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-matrix 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-maybe-rayon 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-air 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-challenger 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-commit 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-dft 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-matrix 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-maybe-rayon 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "serde",
  "tracing",
 ]
@@ -2786,7 +2786,7 @@ dependencies = [
 [[package]]
 name = "p3-util"
 version = "0.2.3-succinct"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
  "serde",
 ]
@@ -3984,14 +3984,14 @@ dependencies = [
 [[package]]
 name = "sp1-core-machine-minimal"
 version = "5.0.5"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
- "p3-air 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-baby-bear 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-poseidon2 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "sp1-derive 5.0.5 (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "sp1-primitives 5.0.5 (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-air 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-baby-bear 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-poseidon2 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "sp1-derive 5.0.5 (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "sp1-primitives 5.0.5 (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "sp1-stark-no-std",
  "std-replacement",
 ]
@@ -4048,7 +4048,7 @@ dependencies = [
 [[package]]
 name = "sp1-derive"
 version = "5.0.5"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
  "quote",
  "syn 1.0.109",
@@ -4096,7 +4096,7 @@ dependencies = [
 [[package]]
 name = "sp1-primitives"
 version = "5.0.5"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
  "bincode 2.0.1",
  "blake3",
@@ -4104,10 +4104,10 @@ dependencies = [
  "hex",
  "lazy_static",
  "num-bigint 0.4.6",
- "p3-baby-bear 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-poseidon2 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-symmetric 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-baby-bear 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-poseidon2 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-symmetric 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "serde",
  "sha2 0.10.9",
 ]
@@ -4268,31 +4268,31 @@ dependencies = [
 [[package]]
 name = "sp1-recursion-core-no-std"
 version = "5.0.5"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
  "cfg-if",
  "ff 0.13.1",
  "hashbrown 0.14.5",
  "itertools 0.13.0",
- "p3-air 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-baby-bear 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-challenger 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-commit 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-dft 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-fri 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-air 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-baby-bear 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-challenger 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-commit 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-dft 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-fri 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "p3-keccak",
- "p3-matrix 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-maybe-rayon 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-merkle-tree 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-poseidon2 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-symmetric 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-matrix 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-maybe-rayon 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-merkle-tree 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-poseidon2 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-symmetric 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "rand 0.8.5",
  "serde",
  "sp1-core-machine-minimal",
- "sp1-derive 5.0.5 (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "sp1-primitives 5.0.5 (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "sp1-derive 5.0.5 (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "sp1-primitives 5.0.5 (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "sp1-stark-no-std",
  "static_assertions",
  "std-replacement",
@@ -4419,30 +4419,30 @@ dependencies = [
 [[package]]
 name = "sp1-stark-no-std"
 version = "5.0.5"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 dependencies = [
  "arrayref",
  "hashbrown 0.14.5",
  "itertools 0.13.0",
  "num-bigint 0.4.6",
  "num-traits",
- "p3-air 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-baby-bear 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-challenger 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-commit 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-dft 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-fri 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-matrix 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-maybe-rayon 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-merkle-tree 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-poseidon2 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-symmetric 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-uni-stark 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-air 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-baby-bear 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-challenger 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-commit 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-dft 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-fri 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-matrix 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-maybe-rayon 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-merkle-tree 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-poseidon2 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-symmetric 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-uni-stark 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-util 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "serde",
- "sp1-derive 5.0.5 (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "sp1-primitives 5.0.5 (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "sp1-derive 5.0.5 (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "sp1-primitives 5.0.5 (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "std-replacement",
  "strum",
  "strum_macros",
@@ -4471,9 +4471,9 @@ dependencies = [
  "blake3",
  "hex",
  "itertools 0.13.0",
- "p3-baby-bear 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
- "p3-symmetric 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps)",
+ "p3-baby-bear 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-field 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
+ "p3-symmetric 0.2.3-succinct (git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std)",
  "rstest",
  "sha2 0.10.9",
  "sp1-prover",
@@ -4530,7 +4530,7 @@ checksum = "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f"
 [[package]]
 name = "std-replacement"
 version = "5.0.5"
-source = "git+https://github.com/zkVerify/sp1.git?branch=no-std-sp1-deps#260e17e8d089922837145f25a037103f17d5885e"
+source = "git+https://github.com/zkVerify/sp1.git?tag=v5.0.5-no_std#f38233d0ed9ccb1e6835d054193b0951dccd75bd"
 
 [[package]]
 name = "strsim"
