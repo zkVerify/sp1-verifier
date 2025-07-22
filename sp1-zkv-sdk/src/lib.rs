@@ -60,21 +60,6 @@ where
     }
 }
 
-pub trait ConvertVerifyingKeyToZkv {
-    fn convert_to_zkv(&self) -> [u8; 32];
-}
-
-impl ConvertVerifyingKeyToZkv for SP1VerifyingKey {
-    fn convert_to_zkv(&self) -> [u8; 32] {
-        self.hash_babybear()
-            .iter()
-            .flat_map(|el| el.as_canonical_u32().to_le_bytes())
-            .collect::<Vec<_>>()
-            .try_into()
-            .unwrap()
-    }
-}
-
 pub fn verify(
     proof_with_public_values: &SP1ZkvProofWithPublicValues,
     vkey: &[u8; 32],

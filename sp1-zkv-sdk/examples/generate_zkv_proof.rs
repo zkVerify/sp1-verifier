@@ -14,7 +14,7 @@
 // limitations under the License.
 
 use sp1_elf::SP1_ELF;
-use sp1_sdk::{Prover, ProverClient, SP1Stdin};
+use sp1_sdk::{HashableKey, Prover, ProverClient, SP1Stdin};
 use sp1_zkv_sdk::*;
 
 fn main() {
@@ -32,7 +32,7 @@ fn main() {
     let zkv_proof = prover
         .convert_proof_to_zkv(proof, Default::default())
         .unwrap();
-    let vkey_hash = vk.convert_to_zkv();
+    let vkey_hash = vk.hash_bytes();
 
     sp1_zkv_sdk::verify(&zkv_proof, &vkey_hash).unwrap();
 }
