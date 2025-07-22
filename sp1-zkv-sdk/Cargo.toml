@@ -6,12 +6,31 @@ license = "Apache-2.0"
 
 [dependencies]
 anyhow = { version = "1.0.98" }
-p3-field = { version = "0.2.3-succinct" }
+p3-baby-bear = { version = "0.2.3-succinct" }
+serde = { version = "1", features = ["derive"] }
+sp1-core-executor = { workspace = true }
 sp1-prover = { workspace = true }
+sp1-recursion-circuit = { workspace = true }
 sp1-sdk = { workspace = true }
 sp1-stark = { workspace = true }
 thiserror = { version = "2" }
 sp1-zkv-verifier = { path = "../sp1-zkv-verifier" }
 
+# optional
+sp1-elf = { path = "../sp1-elf", optional = true }
+bincode = { version = "2", features = ["serde"], optional = true }
+hex = { workspace = true, optional = true }
+
 [dev-dependencies]
 sp1-elf = { path = "../sp1-elf" }
+
+[[bin]]
+name = "generate_example_proof"
+required-features = ["bin"]
+
+[features]
+bin = [
+    "dep:sp1-elf",
+    "dep:bincode",
+    "dep:hex",
+]

@@ -14,16 +14,27 @@
 // limitations under the License.
 
 use anyhow::Result;
-use p3_field::PrimeField32;
-use sp1_prover::components::SP1ProverComponents;
-use sp1_sdk::{HashableKey, Prover, SP1ProofWithPublicValues, SP1VerifyingKey};
-use sp1_stark::{SP1ProverOpts, baby_bear_poseidon2::BabyBearPoseidon2};
+use p3_baby_bear::BabyBear;
+use serde::{Deserialize, Serialize};
+use sp1_core_executor::SP1ReduceProof;
+use sp1_prover::{InnerSC, components::SP1ProverComponents};
+use sp1_recursion_circuit::{machine::SP1CompressWitnessValues, merkle_tree::MerkleProof};
+use sp1_sdk::{Prover, SP1ProofWithPublicValues};
+use sp1_stark::{SP1ProverOpts, StarkVerifyingKey, baby_bear_poseidon2::BabyBearPoseidon2};
 use thiserror::Error;
 
 type ShardProof = sp1_stark::ShardProof<BabyBearPoseidon2>;
 
+#[derive(Clone, Serialize, Deserialize)]
+pub struct Proof {
+    pub shard_proof: ShardProof,
+    pub vk: StarkVerifyingKey<InnerSC>,
+    pub vk_merkle_proof: MerkleProof<BabyBear, BabyBearPoseidon2>,
+}
+
+#[derive(Clone, Serialize, Deserialize)]
 pub struct SP1ZkvProofWithPublicValues {
-    pub proof: ShardProof,
+    pub proof: Proof,
     pub public_values: Vec<u8>,
 }
 
@@ -49,12 +60,23 @@ where
             .proof
             .try_as_compressed()
             .ok_or(SP1ZkvError::UnsupportedProofFormat)?;
-        let zkv_proof = self
+        let SP1ReduceProof {
+            vk,
+            proof: shard_proof,
+        } = self
             .inner()
-            .shrink(*compressed_proof, opts.unwrap_or_default())?
-            .proof;
+            .shrink(*compressed_proof, opts.unwrap_or_default())?;
+        let input = SP1CompressWitnessValues {
+            vks_and_proofs: vec![(vk.clone(), shard_proof.clone())],
+            is_complete: true,
+        };
+        let proof_with_vk_and_merkle = self.inner().make_merkle_proofs(input);
         Ok(SP1ZkvProofWithPublicValues {
-            proof: zkv_proof,
+            proof: Proof {
+                shard_proof,
+                vk,
+                vk_merkle_proof: proof_with_vk_and_merkle.merkle_val.vk_merkle_proofs[0].clone(),
+            },
             public_values: proof.public_values.to_vec(),
         })
     }
@@ -65,9 +87,7 @@ pub fn verify(
     vkey: &[u8; 32],
 ) -> Result<()> {
     let proof = unsafe {
-        std::mem::transmute::<&ShardProof, &sp1_zkv_verifier::ShardProof>(
-            &proof_with_public_values.proof,
-        )
+        std::mem::transmute::<&Proof, &sp1_zkv_verifier::Proof>(&proof_with_public_values.proof)
     };
     sp1_zkv_verifier::verify(vkey, proof, &proof_with_public_values.public_values)?;
     Ok(())

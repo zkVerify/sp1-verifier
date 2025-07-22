@@ -13,20 +13,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-use crate::InnerSC;
 use p3_baby_bear::BabyBear;
 use p3_field::AbstractField;
-
-type StarkVerifyingKey = sp1_stark_no_std::StarkVerifyingKey<InnerSC>;
-
-const DIGEST_SIZE: usize = 8;
-const SHRINK_VK_BYTES: &[u8] = include_bytes!("../resources/vk.bin");
-
-pub fn shrink_vk() -> StarkVerifyingKey {
-    bincode::serde::decode_from_slice(SHRINK_VK_BYTES, bincode::config::legacy())
-        .unwrap()
-        .0
-}
+use sp1_stark_no_std::DIGEST_SIZE;
 
 pub fn recursion_vk_root() -> [BabyBear; DIGEST_SIZE] {
     [
@@ -43,37 +32,19 @@ pub fn recursion_vk_root() -> [BabyBear; DIGEST_SIZE] {
 }
 
 #[cfg(test)]
-mod deserialization {
+mod tests {
+    use sp1_sdk::{Prover, ProverClient};
 
-    use super::SHRINK_VK_BYTES;
-    use sp1_sdk::{Prover, ProverClient, SP1Stdin};
-    use sp1_stark::SP1ProverOpts;
+    use super::*;
 
-    #[ignore]
     #[test]
-    fn shrink_vk_is_correct() {
-        const SP1_ELF: &[u8] = include_bytes!("../resources/sp1-program");
-        let mut stdin = SP1Stdin::new();
-        stdin.write(&b"hello world".to_vec());
-
+    fn recursion_vk_root_is_correct() {
         let prover = ProverClient::builder().cpu().build();
-        let (pk, _vk) = prover.setup(SP1_ELF);
-
-        let proof = prover.prove(&pk, &stdin).compressed().run().unwrap();
-
-        let shrinked_proof = prover
+        let expected_vk = prover
             .inner()
-            .shrink(
-                *proof.proof.try_as_compressed().unwrap(),
-                SP1ProverOpts::default(),
-            )
-            .unwrap();
-
-        let shrink_vk_bytes =
-            bincode::serde::encode_to_vec(&shrinked_proof.vk, bincode::config::legacy()).unwrap();
-
-        prover.inner().recursion_vk_root;
-
-        assert_eq!(SHRINK_VK_BYTES, &shrink_vk_bytes[..]);
+            .recursion_vk_root
+            .map(|el| p3_field_original::PrimeField32::as_canonical_u32(&el));
+        let actual_vk = recursion_vk_root().map(|el| p3_field::PrimeField32::as_canonical_u32(&el));
+        assert_eq!(actual_vk, expected_vk)
     }
 }
