@@ -2,6 +2,11 @@
 resolver = "3"
 members = [ "sp1-elf", "sp1-program", "sp1-zkv-sdk", "sp1-zkv-verifier" ]
 
+[workspace.package]
+version = "0.2.0"
+edition = "2024"
+license = "Apache-2.0"
+
 [workspace.dependencies]
 bincode = { version = "2", default-features = false }
 hex = { version = "0.4.3" }
