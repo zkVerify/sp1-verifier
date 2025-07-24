@@ -21,7 +21,7 @@ Then, you can use the [`sp1_zkv_verifier::verify`](sp1-zkv-verifier/src/lib.rs) 
 This verifier only supports shrink proofs. The utility crate `sp1_zkv_sdk` provides utilities for correctly shrinking SP1 proofs. The following code snippet shows the full workflow.
 
 ```rust
-use sp1_sdk::{Prover, ProverClient, SP1Stdin, include_elf};
+use sp1_sdk::{HashableKey, Prover, ProverClient, SP1Stdin, include_elf};
 use sp1_zkv_sdk::*;
 
 const FIBONACCI_ELF: &[u8] = include_elf!("fibonacci-program");
@@ -42,7 +42,7 @@ fn main() {
     let zkv_proof = prover
         .convert_proof_to_zkv(proof, Default::default())
         .unwrap();
-    let vkey_hash = vk.convert_to_zkv();
+    let vkey_hash = vk.hash_bytes();
 
     sp1_zkv_sdk::verify(&zkv_proof, &vkey_hash).unwrap();
 }

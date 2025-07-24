@@ -72,7 +72,7 @@ pub fn is_vkey_digest_valid(
 ) -> bool {
     let vkey_hash: [BabyBear; 8] = vkey_digest
         .chunks_exact(4)
-        .map(|bytes| BabyBear::from_canonical_u32(u32::from_le_bytes(bytes.try_into().unwrap())))
+        .map(|bytes| BabyBear::from_canonical_u32(u32::from_be_bytes(bytes.try_into().unwrap())))
         .collect::<Vec<_>>()
         .try_into()
         .unwrap();

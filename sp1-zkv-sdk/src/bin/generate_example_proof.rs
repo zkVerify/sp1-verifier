@@ -34,5 +34,13 @@ fn main() {
         .unwrap();
     let vkey_hash = vk.hash_bytes();
 
-    sp1_zkv_sdk::verify(&zkv_proof, &vkey_hash).unwrap();
+    println!("vk hash: {:?}", hex::encode(vkey_hash));
+    println!("public inputs: {:?}", hex::encode(&zkv_proof.public_values));
+
+    bincode::serde::encode_into_std_write(
+        &zkv_proof,
+        &mut std::fs::File::create("proof.bin").unwrap(),
+        bincode::config::legacy(),
+    )
+    .unwrap();
 }
